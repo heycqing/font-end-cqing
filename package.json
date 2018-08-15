@@ -4,15 +4,17 @@
   "description": "打造自己的前端工程化",
   "main": "index.js",
   "scripts": {
+    "sass":" node-sass client/static/css/index.scss dist/index.css",
     "bower:open": "http-server client/",
     "lint:js": "eslint client/**/*.js",
-    "lint:css": "stylelint client/**/*.js",
+    "lint:css": "stylelint client/**/*.scss",
     "lint": "npm-run-all --parallel lint:*",
     "build:images": "scripty",
     "build:styles": "scripty",
     "build:scripts": "scripty",
     "build:hash": "scripty",
-    "prebuild": "rm -rf dist && mkdir -p dist/{images,styles,scripts}"
+    "build":"scripty",
+    "prebuild": "rm -rf dist && mkdir -p dist/static/{images,styles,scripts}"
   },
   "repository": {
     "type": "git",
@@ -31,8 +33,7 @@
   },
   "homepage": "https://github.com/heycqing/font-end-cqing#readme",
   "devDependencies": {
-    "@songkick/replaceinfiles": "^1.1.6",
-    "cssmin": "^0.4.3",
+    "@songkick/replaceinfiles": "^1.1.6", "cssmin": "^0.4.3",
     "eslint": "^5.3.0",
     "hashmark": "^5.0.0",
     "http-server": "^0.11.1",
