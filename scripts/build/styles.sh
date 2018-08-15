@@ -1,4 +1,4 @@
 for file in client/static/css/*.scss
 do
-  node-sass $file | cssmin > dist/static/styles/$(basename $file)
+  node-sass $file  --output-style  compressed  dist/static/styles/$(basename $file).css
 done
