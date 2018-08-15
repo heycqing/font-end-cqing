@@ -10,7 +10,8 @@
     "lint": "npm-run-all --parallel lint:*",
     "build:images": "scripty",
     "build:styles": "scripty",
-    "build:scripts":"scripty",
+    "build:scripts": "scripty",
+    "build:hash": "scripty",
     "prebuild": "rm -rf dist && mkdir -p dist/{images,styles,scripts}"
   },
   "repository": {
@@ -30,8 +31,10 @@
   },
   "homepage": "https://github.com/heycqing/font-end-cqing#readme",
   "devDependencies": {
+    "@songkick/replaceinfiles": "^1.1.6",
     "cssmin": "^0.4.3",
     "eslint": "^5.3.0",
+    "hashmark": "^5.0.0",
     "http-server": "^0.11.1",
     "imagemin-cli": "^3.0.0",
     "node-sass": "^4.9.3",
