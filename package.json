@@ -4,18 +4,10 @@
   "description": "打造自己的前端工程化",
   "main": "index.js",
   "scripts": {
-    "sass":" node-sass client/static/css/index.scss dist/index.css",
-    "js":"./node_modules/uglify-es/bin/uglifyjs client/static/scripts/index.js  --mangle ",
-    "bower:open": "http-server client/",
-    "lint:js": "eslint client/**/*.js",
-    "lint:css": "stylelint client/**/*.scss",
-    "lint": "npm-run-all --parallel lint:*",
-    "build:images": "scripty",
-    "build:styles": "scripty",
-    "build:scripts": "scripty",
-    "build:hash": "scripty",
-    "build":"scripty",
-    "prebuild": "rm -rf dist && mkdir -p dist/static/{images,css,scripts,scripts/js}"
+    "dev": "scripty",
+    "lint": "scripty",
+    "build": "scripty",
+    "prebuild": "scripty"
   },
   "repository": {
     "type": "git",
@@ -34,13 +26,16 @@
   },
   "homepage": "https://github.com/heycqing/font-end-cqing#readme",
   "devDependencies": {
-    "@songkick/replaceinfiles": "^1.1.6", "cssmin": "^0.4.3",
+    "@songkick/replaceinfiles": "^1.1.6",
+    "cssmin": "^0.4.3",
     "eslint": "^5.3.0",
     "hashmark": "^5.0.0",
     "http-server": "^0.11.1",
     "imagemin-cli": "^3.0.0",
+    "livereload": "^0.7.0",
     "node-sass": "^4.9.3",
     "npm-run-all": "^4.1.3",
+    "onchange": "^4.1.0",
     "scripty": "^1.7.2",
     "stylelint": "^9.4.0",
     "uglify-es": "^3.3.9"

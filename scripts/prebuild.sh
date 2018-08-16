@@ -1,0 +1,1 @@
+rm -rf dist && mkdir -p dist/static/{images,css,scripts,scripts/js}
