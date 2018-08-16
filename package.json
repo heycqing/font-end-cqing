@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "sass":" node-sass client/static/css/index.scss dist/index.css",
+    "js":"./node_modules/uglify-es/bin/uglifyjs client/static/scripts/index.js  --mangle ",
     "bower:open": "http-server client/",
     "lint:js": "eslint client/**/*.js",
     "lint:css": "stylelint client/**/*.scss",
@@ -14,7 +15,7 @@
     "build:scripts": "scripty",
     "build:hash": "scripty",
     "build":"scripty",
-    "prebuild": "rm -rf dist && mkdir -p dist/static/{images,css,scripts}"
+    "prebuild": "rm -rf dist && mkdir -p dist/static/{images,css,scripts,scripts/js}"
   },
   "repository": {
     "type": "git",

@@ -1,3 +1,7 @@
+# Author : cqing<SiqingIII@163.com>
+# Copyright (c) wusiqing.com
+# Script follows here:
+
 #给图片资源添加上版本号，并且替换引用
 hashmark -c dist -r -l 8 '**/*.{png,jpg}' '{dir}/{name}.{hash}{ext}' | replaceinfiles -S -s 'dist/**/*.scss' -d '{dir}/{base}'
 
