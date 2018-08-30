@@ -11,7 +11,7 @@
 - [✔️]  哈希值文件构建
 <br>
 使用手册：
-- `npm run build` 是运行打包构建命令，输出文件夹是：`dist` \n
+- `npm run build` 是运行打包构建命令，输出文件夹是：`dist` <br>
 - `npm run dev` 是运行本地服务打开，运行文件；
 
 
